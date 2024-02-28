@@ -6,9 +6,10 @@
   background-color: #FFF1E7;
 }
 
-*{
+/* *{
   font-family:'Times New Roman', Times, serif;
-}
+} */
+
 .background {
     background-image: url('../../public/bg.png');
 }

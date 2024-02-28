@@ -1,8 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
+import { Kumbh_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+// const inter = Inter({ subsets: ['latin'] })
+const kumbh = Kumbh_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'MCYC',
@@ -16,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Navbar />
+      <body className={kumbh.className}>{children}</body>
+      <Footer />
     </html>
   )
 }

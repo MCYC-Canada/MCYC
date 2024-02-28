@@ -9,6 +9,12 @@ const config: Config = {
   theme: {
     extend: {
     },
+    color: {
+      'dark-blue': '#0C1935'
+    },
+    fontFamily: {
+
+    },
   },
   plugins: [],
 }

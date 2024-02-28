@@ -1,8 +1,8 @@
 // pages/index.js
 import React from 'react';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Navbar from './components/Navbar';
+// import Footer from './components/Footer';
 import Button from './components/Button';
 import Month from './components/Month';
 
@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="background h-screen bg-cover bg-no-repeat">
 
@@ -49,7 +49,7 @@ const Home = () => {
         </div>
 
       </main>
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   );

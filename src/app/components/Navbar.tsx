@@ -9,6 +9,7 @@ const Navbar: React.FC = () => {
           {/* <span className="text-2xl font-bold cursor-pointer">MCYC</span> */}
           <img src="/Logo/logo.png" className="w-1/6" />
         </Link>
+        
         <ul className="flex space-x-4 items-center">
           <li>
             <Link href="/about">
