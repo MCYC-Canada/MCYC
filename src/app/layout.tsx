@@ -21,9 +21,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Navbar />
-      <body className={kumbh.className}>{children}</body>
-      <Footer />
+      
+      <body className={kumbh.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+      
     </html>
   )
 }
