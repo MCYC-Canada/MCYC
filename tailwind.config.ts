@@ -8,9 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-    },
-    color: {
-      'dark-blue': '#0C1935'
+      colors: {
+        'themed-blue': '#0C1935',
+        'line-brown': "#780000"
+      },
     },
     fontFamily: {
 

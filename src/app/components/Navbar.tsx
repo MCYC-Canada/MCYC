@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
           {/* <span className="text-2xl font-bold cursor-pointer">MCYC</span> */}
           <img src="/Logo/logo.png" className="w-1/6" />
         </Link>
-        
+
         <ul className="flex space-x-4 items-center">
           <li>
             <Link href="/about">
@@ -24,6 +24,11 @@ const Navbar: React.FC = () => {
           <li>
             <Link href="/contact">
               <span className="hover:underline cursor-pointer">Team</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/sponsors">
+              <span className="hover:underline cursor-pointer">Sponsors</span>
             </Link>
           </li>
           <li>
