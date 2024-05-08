@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contact">
+            <Link href="/team">
               <span className="hover:underline cursor-pointer">Team</span>
             </Link>
           </li>

@@ -10,7 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         'themed-blue': '#0C1935',
-        'line-brown': "#780000"
+        'line-brown': "#780000",
+        'gray-white' : "#F3F3F3",
       },
     },
     fontFamily: {
