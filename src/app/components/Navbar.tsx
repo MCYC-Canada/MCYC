@@ -1,42 +1,70 @@
+"use client"
 import Link from 'next/link';
 import Button from './Button';
+import { usePathname } from 'next/navigation'
 
 const Navbar: React.FC = () => {
-  return (
-    <nav className="p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/">
-          {/* <span className="text-2xl font-bold cursor-pointer">MCYC</span> */}
-          <img src="/Logo/logo.png" className="w-1/6" />
-        </Link>
+  const pathname = usePathname()
+  let subpage = pathname.split("/")[1]
+  console.log(subpage)
 
-        <ul className="flex space-x-4 items-center">
+  function Linkness(type=""){
+    let classes = ""
+    console.log(type)
+    if (type === subpage){
+      classes += "underline decoration-solid font-bold text-line-brown"
+    } else {
+      classes += "hover:underline cursor-pointer"
+    }
+    return classes
+  }
+
+  
+  return (
+    <div className="p-4 items-center">
+      <div className="flex container mx-auto flex justify-between items-center">
+        <Link href="/" className="w-1/6">
+              {/* <span className="text-2xl font-bold cursor-pointer">MCYC</span> */}
+          <img src="/Logo/logo.png"  />
+        </Link>
+        <ul className="flex space-x-10">
           <li>
-            <Link href="/about">
-              <span className=" hover:underline cursor-pointer">About Us</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <span className="hover:underline cursor-pointer">Past Events</span>
+            <Link href="/">
+              <span className={Linkness("")}>Home</span>
             </Link>
           </li>
           <li>
             <Link href="/team">
-              <span className="hover:underline cursor-pointer">Team</span>
+              <span className={Linkness("team")}>Our Team</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/monthly_theme">
+              <span className={Linkness("monthly_theme")}>Monthly Theme</span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/past_events">
+              <span className={Linkness("past_events")}>Past Events</span>
             </Link>
           </li>
           <li>
             <Link href="/sponsors">
-              <span className="hover:underline cursor-pointer">Sponsors</span>
+              <span className={Linkness("sponsors")}>Sponsors</span>
             </Link>
           </li>
-          <li>
-            <Button style="p-3" link="/" name="Monthly Theme" />
-          </li>
         </ul>
+        <div className="flex space-x-4">
+          <Link target="_blank" href="https://www.instagram.com/mcyc.22/">
+            <img src="/Logo/instagram.png"  />
+          </Link>
+          
+          <Link target="_blank" href="https://www.linkedin.com/company/movement-for-change-youth-council">
+            <img src="/Logo/linkedin.png"  />
+          </Link>
+        </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

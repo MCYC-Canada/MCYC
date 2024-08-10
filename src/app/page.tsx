@@ -27,11 +27,11 @@ const Home = () => {
       <main className="py-20 px-60 text-red-900 text-center bg-white">
         <h2 className="text-4xl font-semibold mb-4">Advocating for social justice & mental health
           where others won’t.</h2>
-
         <p className="mx-20 text-xl">
           MCYC provides opportunities for students get involved and help foster change in their communities through establish initiatives and events.
         </p>
       </main>
+      <span className="block h-px mx-0 my-[1em] p-0 border-t-[#ccc] border-0 border-t border-solid"></span>
       <Month link="https://blog.short.io/content/images/2018/01/short.cm-logo-1024x1024.png" />
 
       <main className='p-10 flex justify-between items-center text-center'>
