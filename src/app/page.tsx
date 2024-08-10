@@ -1,3 +1,4 @@
+"use client"
 // pages/index.js
 import React from 'react';
 
@@ -7,7 +8,10 @@ import Button from './components/Button';
 import Month from './components/Month';
 
 const Home = () => {
-
+  const scrolltoHash = function (element_id: string) {
+    const element = document.getElementById(element_id)
+    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
   return (
     <div>
 
@@ -20,11 +24,12 @@ const Home = () => {
 
           <p className="text-white p-5 lg:w-2/3">
             Main Characters Youth Council (MCYC) is an organization has been dedicated to educating youth on social justice issues that impact North Americans since 2021.        </p>
-          <Button style="p-4 text-center w-1/5 m-5" link='/' name="Learn More" />
+          {/* <Button style="p-4 text-center w-1/5 m-5" onClick={() => scrolltoHash('contact')} name="Learn More" /> */}
+          <button onClick={() => scrolltoHash('first-section')} className="p-4 text-center w-1/5 m-5 bg-red-900 text-white">Learn More</button>
         </header>
 
       </div>
-      <main className="py-20 px-60 text-red-900 text-center bg-white">
+      <main id="first-section" className="py-20 px-60 text-red-900 text-center bg-white">
         <h2 className="text-4xl font-semibold mb-4">Advocating for social justice & mental health
           where others won’t.</h2>
         <p className="mx-20 text-xl">

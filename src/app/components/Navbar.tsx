@@ -6,11 +6,9 @@ import { usePathname } from 'next/navigation'
 const Navbar: React.FC = () => {
   const pathname = usePathname()
   let subpage = pathname.split("/")[1]
-  console.log(subpage)
 
   function Linkness(type=""){
     let classes = ""
-    console.log(type)
     if (type === subpage){
       classes += "underline decoration-solid font-bold text-line-brown"
     } else {
@@ -56,11 +54,11 @@ const Navbar: React.FC = () => {
         </ul>
         <div className="flex space-x-4">
           <Link target="_blank" href="https://www.instagram.com/mcyc.22/">
-            <img src="/Logo/instagram.png"  />
+            <img src="/Logo/instagram.png"  className="w-20"/>
           </Link>
           
           <Link target="_blank" href="https://www.linkedin.com/company/movement-for-change-youth-council">
-            <img src="/Logo/linkedin.png"  />
+            <img src="/Logo/linkedin.png"  className="w-20"/>
           </Link>
         </div>
       </div>
