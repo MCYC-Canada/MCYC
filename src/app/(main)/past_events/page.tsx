@@ -16,7 +16,7 @@ export default async function Past_Events () {
     <div>
       <div className="background_event h-screen bg-cover bg-no-repeat justify-center text-center place-content-center space-y-12 mb-10">
         <h1 className="text-white text-9xl font-bold">Our Events</h1>
-        <p className="text-white text-3xl">Take a look at some of  MCYC's work over the past few years</p>
+        <p className="text-white text-3xl">Take a look at some of  MCYC&apos;s work over the past few years</p>
       </div>
       <Events events={events} />;
     </div>

@@ -1,11 +1,11 @@
-import {DocumentTextIcon} from '@sanity/icons'
+import {DocumentTextIcon, PlayIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const eventType = defineType({
   name: 'event',
   title: 'Event',
   type: 'document',
-  icon: DocumentTextIcon,
+  icon: PlayIcon,
   fields: [
     defineField({
       name: 'title',
