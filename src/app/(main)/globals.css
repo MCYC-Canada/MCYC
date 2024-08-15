@@ -12,5 +12,9 @@
 } */
 
 .background {
-    background-image: url('../../public/bg.png');
+    background-image: url('../../../public/bg.png');
+}
+
+.background_event {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../public/event.png');
 }

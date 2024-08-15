@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
               {/* <span className="text-2xl font-bold cursor-pointer">MCYC</span> */}
           <img src="/Logo/logo.png"  />
         </Link>
-        <ul className="flex space-x-10">
+        <ul className="flex space-x-10 text-xl">
           <li>
             <Link href="/">
               <span className={Linkness("")}>Home</span>
@@ -46,6 +46,14 @@ const Navbar: React.FC = () => {
               <span className={Linkness("past_events")}>Past Events</span>
             </Link>
           </li>
+
+          {/* Under Developing */}
+          {/* <li>
+            <Link href="/blogs">
+              <span className={Linkness("blogs")}>Blogs</span>
+            </Link>
+          </li> */}
+          
           <li>
             <Link href="/sponsors">
               <span className={Linkness("sponsors")}>Sponsors</span>

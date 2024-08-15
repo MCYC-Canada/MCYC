@@ -5,6 +5,7 @@ import { Kumbh_Sans } from 'next/font/google'
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { headers } from 'next/headers';
 
 // const inter = Inter({ subsets: ['latin'] })
 const kumbh = Kumbh_Sans({ subsets: ['latin'] })
@@ -19,13 +20,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const headersList = headers();
+  const pathname = headersList.get("x-invoke-path") || "";
+  const specificRoute = "/structure";
+  
   return (
     <html lang="en">
       
       <body className={kumbh.className}>
-        <Navbar />
+        {pathname !== specificRoute && <Navbar />}
         {children}
-        <Footer />
+        {pathname !== specificRoute && <Footer />}
       </body>
       
     </html>

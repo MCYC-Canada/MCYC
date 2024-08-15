@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
       </div> */}
       <div className="space-y-4">
         <h3 className="text-3xl font-bold">Movement for Change Youth Council</h3>
-        <h4 className="text-2xl">mcyc.22.051@gmail.com</h4>
+        <h4 className="text-2xl">mcyc.22.0512@gmail.com</h4>
         <div className="grid grid-cols-2 space-y-2">
           <Link href="/" className="text-xl">Home</Link>
           <Link href="/past_events" className="text-xl">Past Events</Link>
