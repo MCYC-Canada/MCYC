@@ -27,7 +27,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      
+      <meta name="google-site-verification" content="aJS1vAdH8IhmFuv5uxG1u7Swtoz-r20YlNUVUzud3K4" />
       <body className={kumbh.className}>
         {pathname !== specificRoute && <Navbar />}
         {children}
