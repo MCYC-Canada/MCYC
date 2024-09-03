@@ -23,17 +23,16 @@ const Home = () => {
           <h1 className="font-semibold mb-4 text-white text-6xl md:text-8xl">Introducing MCYC</h1>
 
           <p className="text-white p-5 lg:w-2/3">
-            Main Characters Youth Council (MCYC) is an organization has been dedicated to educating youth on social justice issues that impact North Americans since 2021.        </p>
+            Movement For Change Youth Council (MCYC) is an organization has been dedicated to educating youth on social justice issues that impact North Americans since 2021.        </p>
           {/* <Button style="p-4 text-center w-1/5 m-5" onClick={() => scrolltoHash('contact')} name="Learn More" /> */}
           <button onClick={() => scrolltoHash('first-section')} className="p-4 text-center w-1/5 m-5 bg-red-900 text-white">Learn More</button>
         </header>
 
       </div>
       <main id="first-section" className="py-20 px-60 text-red-900 text-center bg-white">
-        <h2 className="text-4xl font-semibold mb-4">Advocating for social justice & mental health
-          where others won’t.</h2>
+        <h2 className="text-4xl font-semibold mb-4">Advocating for social justice & mental health where others won’t.</h2>
         <p className="mx-20 text-xl">
-          MCYC provides opportunities for students get involved and help foster change in their communities through establish initiatives and events.
+        Advocating for social justice by educating, empowering, and inspiring a community of transformative leaders.
         </p>
       </main>
       <span className="block h-px mx-0 my-[1em] p-0 border-t-[#ccc] border-0 border-t border-solid"></span>

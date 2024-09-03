@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
         <div className="space-y-4 ml-auto">
           <p className="text-xl font-bold">Connect With Us</p>
           <div className="flex">
-            <img src='/Logo/instagram.png' className="w-20"></img>
+            <img src='/Logo/instagram.webp' className="w-20"></img>
             <img src='/Logo/linkedin.png' className="w-20"></img>
           </div>
           <p className='text-center'>Copyright &copy; 2023 MCYC</p>
