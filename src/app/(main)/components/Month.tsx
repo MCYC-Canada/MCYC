@@ -9,7 +9,7 @@ interface MonthProps {
 export default function Month(props: MonthProps) {
   return (
     // `${props.style}`
-    <div className='p-10 flex justify-between'>
+    <div className='p-10 flex justify-between text-red-900'>
       <div className='p-10 w-2/3 '>
       <h2 className="text-5xl font-bold pb-5">Monthly Themes</h2>
       <div className='p-5 text-xl'>

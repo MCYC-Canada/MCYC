@@ -11,16 +11,22 @@ export default async function Past_Events () {
     query: EVENT_QUERY,
   });
 
-  
   return (
     <div>
-      <div className="background_event h-screen bg-cover bg-no-repeat justify-center text-center place-content-center space-y-12 mb-10">
-        <h1 className="text-white text-9xl font-bold">Our Events</h1>
-        <p className="text-white text-3xl">Take a look at some of  MCYC&apos;s work over the past few years</p>
+      {/* Hero section */}
+      <div className="background_event h-screen bg-cover bg-no-repeat flex flex-col justify-center items-center space-y-6 md:space-y-12 mb-10 px-4 text-center">
+        <h1 className="text-white text-5xl md:text-7xl lg:text-9xl font-bold">
+          Our Events
+        </h1>
+        <p className="text-white text-xl md:text-2xl lg:text-3xl">
+          Take a look at some of MCYC&apos;s work over the past few years
+        </p>
       </div>
-      <Events events={events} />;
+      
+      {/* Events Component */}
+      <div className="px-4 md:px-10">
+        <Events events={events} />
+      </div>
     </div>
   );
 };
-
-// export default Past_Events;

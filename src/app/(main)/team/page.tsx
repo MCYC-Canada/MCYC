@@ -12,9 +12,10 @@ const Team: React.FC = () => {
   return (
     <div>
       <img src="bg.png" className="border rounded-none h-96 w-full object-cover" />
-      <div className="bg-white h-32 w-full flex justify-center items-center text-lg m-0">
+      <div className="bg-white h-32 w-full flex justify-center items-center text-lg m-0 text-center">
         <p>Meet the individuals working behind the organization.</p>
       </div>
+      
 
       {/* Management Team */}
       <div className="bg-gray-white m-0">
@@ -27,15 +28,15 @@ const Team: React.FC = () => {
       </div>
 
       {/* Media Team */}
-      <div className="bg-white m-0">
+      {/* <div className="bg-white m-0">
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Media Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5 place-items-center">
-          {/* Add Media Team profiles here */}
+          // Add Media Team profiles here
         </div>
-      </div>
+      </div>  */}
 
       {/* Website Development Team */}
-      <div className="bg-gray-white m-0">
+      {/* <div className="bg-gray-white m-0">
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Website Development Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5 place-items-center">
           <Profile src="webdev/aarushi.jpg" name="Aarushi B." position="Web Development Director" />
@@ -43,25 +44,26 @@ const Team: React.FC = () => {
           <Profile src="webdev/navya.jpg" name="Navya K." position="Web Design Developer" />
           <Profile src="webdev/grace.jpg" name="Grace Z." position="Web Coding Developer" />
         </div>
-      </div>
+      </div> */}
 
       {/* Outreach Team */}
-      <div className="bg-white m-0">
+      {/* <div className="bg-white m-0">
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Outreach Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5 place-items-center">
           <Profile src="outreach/isabella.jpg" name="Isabella Z." position="Outreach Team Director" />
           <Profile src="outreach/naseem.jpg" name="Naseem P." position="Outreach Team Director" />
         </div>
-      </div>
+      </div> */}
 
       {/* Events Team */}
-      <div className="bg-gray-white m-0">
+      {/* <div className="bg-gray-white m-0">
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Events Team</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-5 place-items-center">
           <Profile src="event/nabiha.jpg" name="Nabiha T." position="Events Team Director" />
           <Profile src="event/archisha.jpg" name="Archisha K." position="Events Team Director" />
         </div>
-      </div>
+      </div> */}
+
     </div>
   );
 };
