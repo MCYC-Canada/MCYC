@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
       <div className="flex container mx-auto justify-between items-center">
         {/* Logo */}
         <Link href="/" className="w-1/6 ml-4 lg:ml-12">
-          <img src="/Logo/logo.png" alt="Logo" className="w-24 lg:w-32" />
+          <img src="/Logo/logo.webp" alt="Logo" className="w-24 lg:w-32" />
         </Link>
 
         {/* Hamburger Icon for mobile */}
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
             target="_blank"
             href="https://www.linkedin.com/company/movement-for-change-youth-council"
           >
-            <img src="/Logo/linkedin.png" className="w-8 lg:w-12" alt="LinkedIn" />
+            <img src="/Logo/linkedin.webp" className="w-8 lg:w-12" alt="LinkedIn" />
           </Link>
         </div>
       </div>
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
             target="_blank"
             href="https://www.linkedin.com/company/movement-for-change-youth-council"
           >
-            <img src="/Logo/linkedin.png" className="w-8" alt="LinkedIn" />
+            <img src="/Logo/linkedin.webp" className="w-8" alt="LinkedIn" />
           </Link>
         </div>
       )}

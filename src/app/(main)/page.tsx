@@ -44,7 +44,7 @@ const Home = () => {
 
       <main className='p-5 md:p-10 flex flex-col lg:flex-row justify-center lg:justify-between items-center text-center'>
 
-        <img className='w-full md:w-1/2 lg:w-1/3 h-auto m-5' src="kids.png" alt="Kids" />
+        <img className='w-full md:w-1/2 lg:w-1/3 h-auto m-5' src="kids.webp" alt="Kids" />
 
         <div className='p-5 mx-0 md:mx-10 w-full md:w-2/3 text-red-900'>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-5">Opportunities for Students by Students</h2>
