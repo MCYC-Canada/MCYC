@@ -12,7 +12,8 @@ const kumbh = Kumbh_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'MCYC',
-  description: 'Main Characters Youth Council (MCYC) is an organization has been dedicated to educating youth on social justice issues that impact North Americans since 2021.',
+  description: 'Movement for Change Youth Council (MCYC) is an organization has been dedicated to educating youth on social justice issues that impact North Americans since 2021.',
+  
 }
 
 export default function RootLayout({

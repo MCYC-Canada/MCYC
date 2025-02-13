@@ -18,8 +18,10 @@ export default function Profile(props: ProfileProps) {
         height = {500}
         // width={500} automatically provided
         // height={500} automatically provided
-        blurDataURL="data:..." //automatically provided
-        placeholder="blur" // Optional blur-up while loading
+        loading="lazy"
+        // blurDataURL="data:..." //automatically provided
+        blurDataURL={`/team_photos_placeholders/${props.src.replace(/.jpg/gi, ".avi")}`} // Optional blur-up while loading
+        placeholder='blur'
         className="border rounded-lg h-72 w-72 object-cover" 
         />
         {/* <img src={"/team_photos/"+props.src} width="85%" className="border rounded-lg h-72 w-72 object-cover" /> */}
