@@ -19,13 +19,13 @@ const Sponsors = () => {
         <div className="bg-white px-4 md:px-10">
           <Sponsor
             name="Des Fleurs by Madi"
-            source="sponsor_fleur.png"
+            source="sponsor_fleur.webp"
             link="https://www.etsy.com/ca/shop/DesFleursByMadi"
             size="85%"
           />
           <Sponsor
             name="Seraph Custom Creations"
-            source="sponsor_seraph.png"
+            source="sponsor_seraph.webp"
             link="https://www.etsy.com/shop/SeraphCustomCreation"
             size="85%"
           />
@@ -34,14 +34,14 @@ const Sponsors = () => {
             <div className="lg:border-r-8 lg:border-line-brown lg:pr-5">
               <Sponsor
                 name="ENSO Granola"
-                source="sponsor_enso.png"
+                source="sponsor_enso.webp"
                 link="https://ensoeats.com/"
                 size="65%"
               />
             </div>
             <Sponsor
               name="JOMO Studio"
-              source="sponsor_jomo.png"
+              source="sponsor_jomo.webp"
               link="https://jomostudio.com/"
               size="40%"
             />
@@ -49,7 +49,7 @@ const Sponsors = () => {
 
           <Sponsor
             name="Etee"
-            source="sponsor_etee.png"
+            source="sponsor_etee.webp"
             link="https://www.shopetee.com/"
             size="85%"
           />

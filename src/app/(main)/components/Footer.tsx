@@ -16,14 +16,14 @@ const Footer: React.FC = () => {
 
       <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-10 w-full lg:w-auto">
         <div className="w-40 lg:w-auto">
-          <img src="key.png" className="h-40 mx-auto lg:ml-auto"></img>
+          <img src="key.webp" className="h-40 mx-auto lg:ml-auto"></img>
         </div>
 
         <div className="space-y-4 text-center lg:text-left">
           <p className="text-xl font-bold">Connect With Us</p>
           <div className="flex justify-center lg:justify-start space-x-4">
             <img src='/Logo/instagram.webp' className="w-12"></img>
-            <img src='/Logo/linkedin.png' className="w-12"></img>
+            <img src='/Logo/linkedin.webp' className="w-12"></img>
           </div>
           <p>Copyright &copy; 2023 MCYC</p>
         </div>
