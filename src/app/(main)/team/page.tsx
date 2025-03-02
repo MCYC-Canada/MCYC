@@ -29,7 +29,7 @@ const Team: React.FC = () => {
       </div>
 
       {/* Ambassadors Team */}
-      <div className="bg-gray-white m-0">
+      <div className="bg-white m-0">
         {/* Header */}
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Ambassadors Team</h2>
         {/* Photos */}
@@ -41,9 +41,6 @@ const Team: React.FC = () => {
           <Profile src="Ambassadors/cropped_leanne_wong.webp" name="Leanne Wong" position="Ambassador" />
           <Profile src="Ambassadors/cropped_maggie_wu.webp" name="Margaret Wu" position="Ambassador" />
           <Profile src="Ambassadors/cropped_serena.webp" name="Serena Sum" position="Ambassador" />
-          <Profile src="Ambassadors/cropped_umair_waseem.webp" name="Umair Waseem" position="Ambassador" />
-          <Profile src="Ambassadors/cropped_vareesha_s.webp" name="Vareesha Shiraz" position="Ambassador" />
-          <Profile src="Ambassadors/cropped_yehonatan_shakarghi.webp" name="Yehonathan Shakarghi" position="Ambassador" />
         </div>
       </div>
 
@@ -59,7 +56,7 @@ const Team: React.FC = () => {
       </div>
 
       {/* Events Team */}
-      <div className="bg-gray-white m-0">
+      <div className="bg-white m-0">
         {/* Header */}
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Events Team</h2>
         {/* Photos */}
@@ -93,7 +90,7 @@ const Team: React.FC = () => {
       </div>
 
       {/* Marketing Team */}
-      <div className="bg-gray-white m-0">
+      <div className="bg-white m-0">
         {/* Header */}
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Marketing Team</h2>
         {/* Photos */}
@@ -123,7 +120,7 @@ const Team: React.FC = () => {
       </div>
 
       {/* Outreach Team */}
-      <div className="bg-gray-white m-0">
+      <div className="bg-white m-0">
         {/* Header */}
         <h2 className="text-4xl font-bold text-center pt-10 pb-5 text-line-brown">Outreach Team</h2>
         {/* Photos */}
