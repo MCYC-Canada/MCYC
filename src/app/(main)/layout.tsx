@@ -11,7 +11,7 @@ import { headers } from 'next/headers';
 const kumbh = Kumbh_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MCYC',
+  title: 'Movement for Change Youth Council',
   description: 'Movement for Change Youth Council (MCYC) is an organization has been dedicated to educating youth on social justice issues that impact North Americans since 2021.',
   
 }
@@ -29,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <meta name="google-site-verification" content="aJS1vAdH8IhmFuv5uxG1u7Swtoz-r20YlNUVUzud3K4" />
+      <meta property="og:title" content="MCYC" />
       <body className={kumbh.className}>
         {pathname !== specificRoute && <Navbar />}
         {children}
