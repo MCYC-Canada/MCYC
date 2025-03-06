@@ -18,6 +18,12 @@ const Sponsors = () => {
 
         <div className="bg-white px-4 md:px-10">
           <Sponsor
+            name="Hub Climbing Markham"
+            source="sponsor_hub.webp"
+            link="https://hubclimbing.com/markham/"
+            size="85%"
+          />
+          <Sponsor
             name="Des Fleurs by Madi"
             source="sponsor_fleur.webp"
             link="https://www.etsy.com/ca/shop/DesFleursByMadi"
