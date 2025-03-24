@@ -21,10 +21,10 @@ const Home = () => {
       <div className="background h-screen bg-cover bg-no-repeat">
 
         <header className="text-center p-5 pt-40 text-xl md:pt-60 md:text-2xl lg:text-left lg:p-20 lg:pt-40">
-          <h1 className="font-semibold mb-4 text-white text-5xl md:text-6xl lg:text-8xl">Introducing MCYC</h1>
+          <h1 className="font-semibold mb-4 text-white text-5xl md:text-6xl lg:text-8xl">Movement For Change Youth Council</h1>
 
           <p className="text-white p-5 lg:w-2/3 md:text-lg lg:text-xl">
-            Movement For Change Youth Council (MCYC) is an organization that has been dedicated to educating youth on social justice issues that impact North Americans since 2021.
+            MCYC is an organization that has been dedicated to educating youth on social justice issues that impact North Americans since 2021.
           </p>
 
           <button onClick={() => scrolltoHash('first-section')} className="p-4 w-1/2 md:w-1/3 lg:w-1/5 m-5 bg-red-900 text-white">Learn More</button>
