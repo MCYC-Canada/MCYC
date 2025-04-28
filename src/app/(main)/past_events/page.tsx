@@ -18,9 +18,9 @@ export default async function Past_Events () {
         <h1 className="text-white text-5xl md:text-7xl lg:text-9xl font-bold">
           Our Events
         </h1>
-        <p className="text-white text-xl md:text-2xl lg:text-3xl">
+        <h2 className="text-white text-xl md:text-2xl lg:text-3xl">
           Take a look at some of MCYC&apos;s work over the past few years
-        </p>
+        </h2>
       </div>
       
       {/* Events Component */}
