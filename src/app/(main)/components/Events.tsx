@@ -6,30 +6,36 @@ import { PortableText } from "next-sanity";
 
 export function Events({ events }: { events: EVENT_QUERYResult }) {
   return (
-    <ul className="container mx-auto grid grid-cols-1 divide-y divide-blue-100">
+    <div className="container mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {events.map((event, index) => (
-        <li
+        <div
           key={index}
-          className={`flex flex-col lg:flex-row items-center py-10 border-line-brown ${
-            index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-          }`}
+          className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
-          {/* Image */}
-          <img
-            src={urlFor(event?.mainImage?.asset?._ref || "").url()}
-            className="border rounded-lg h-64 w-full object-cover lg:h-72 lg:w-72 mb-5 lg:mb-0"
-          />
-          
-          {/* Text content */}
-          <div className="lg:mx-5 w-full text-center lg:text-left">
-            <h1 className="font-bold text-2xl md:text-4xl">{event?.title}</h1>
-            <p className="my-3">{new Date(event.date || "").toDateString()}</p>
-            <div className="my-7 text-lg md:text-2xl">
-              {event?.description ? <PortableText value={event?.description || ""} /> : null}
-            </div>
+          {/* Image with overlay */}
+          <div className="relative group aspect-[1/1] w-full">
+            <img
+              src={urlFor(event?.mainImage?.asset?._ref || "").url()}
+              className="w-full h-full object-cover"
+            />
+
+            {event?.description && (
+              <div className="absolute inset-0 bg-black bg-opacity-75 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-8 text-center text-sm md:text-base">
+                <PortableText value={event?.description || ""} />
+              </div>
+            )}
           </div>
-        </li>
+
+          {/* Text content stays always visible */}
+          <div className="p-4 text-center">
+            <h1 className="font-bold text-xl md:text-2xl">{event?.title}</h1>
+            <p className="text-sm text-gray-600 mt-2">{new Date(event.date || "").toDateString()}</p>
+          </div>
+        </div>
       ))}
-    </ul>
+    </div>
+
+
+
   );
 }
