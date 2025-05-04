@@ -10,6 +10,9 @@ export const POST_QUERY = groq`*[_type == "post" && slug.current == $slug][0]{
   title, body, mainImage
 }`;
 
-export const EVENT_QUERY = groq`*[_type == "event"]{
-title, description, mainImage, date
+export const EVENT_QUERY = groq`*[_type == "event"] | order(date desc) {
+  title,
+  description,
+  mainImage,
+  date
 }`;
