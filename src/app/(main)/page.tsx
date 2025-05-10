@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 const stats = [
   { label: "Students Engaged", value: 2500, suffix: "+", color: "bg-red-100" },
   { label: "Volunteer Hours", value: 1000, suffix: "+", color: "bg-yellow-100" },
-  { label: "Events Hosted", value: 10, suffix: "+", color: "bg-green-100" },
+  { label: "Topics Covered", value: 15, suffix: "+", color: "bg-green-100" },
 ];
 
 const StatItem = ({ stat, delay }: { stat: typeof stats[0]; delay: number }) => {
