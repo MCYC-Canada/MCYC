@@ -83,7 +83,7 @@ const Home = () => {
         transition={{ duration: 1 }}
       >
         <h2 className="text-xl md:text-2xl lg:text-3xl font-medium">
-          "Young people, when informed and empowered, when they realize that what they do truly makes a difference, can indeed change the world." — Jane Goodall
+          &quot;Young people, when informed and empowered, when they realize that what they do truly makes a difference, can indeed change the world.&quot; — Jane Goodall
         </h2>
       </motion.section>
 
