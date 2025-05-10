@@ -1,189 +1,165 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
+import { useRouter } from 'next/navigation';
 
+const stats = [
+  { label: "Students Engaged", value: 2500, suffix: "+", color: "bg-red-100" },
+  { label: "Volunteer Hours", value: 1000, suffix: "+", color: "bg-yellow-100" },
+  { label: "Events Hosted", value: 10, suffix: "+", color: "bg-green-100" },
+];
 
-const MotionMain = motion.main;
-const MotionImg = motion.img;
-const MotionDiv = motion.div;
-const MotionH1 = motion.h1;
-const MotionH2 = motion.h2;
-const MotionH3 = motion.h3;
-const MotionButton = motion.button;
-
-
-const Home = () => {
-  const scrolltoHash = (element_id: string) => {
-    const element = document.getElementById(element_id)
-    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-  }
+const StatItem = ({ stat, delay }: { stat: typeof stats[0]; delay: number }) => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.6 });
 
   return (
-    <div>
+    <motion.div
+      ref={ref}
+      className={`w-32 h-32 md:w-40 md:h-40 rounded-full flex flex-col justify-center items-center shadow-md ${stat.color}`}
+      initial={{ scale: 0 }}
+      animate={{ scale: inView ? 1 : 0 }}
+      transition={{ delay, duration: 0.6 }}
+    >
+      <span className="text-2xl md:text-3xl text-red-800 font-semibold">
+        {inView && <CountUp end={stat.value} duration={2} suffix={stat.suffix} />}
+      </span>
+      <p className="text-xs md:text-sm text-center mt-2 text-gray-700">{stat.label}</p>
+    </motion.div>
+  );
+};
 
-      {/* <Navbar /> */}
+const Home = () => {
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-      <MotionDiv
-        className="background h-screen bg-cover bg-no-repeat"
+  const router = useRouter();
+  return (
+    <div className="text-red-900">
+      {/* Hero Section */}
+      <motion.section
+        className="background h-screen bg-cover bg-no-repeat bg-center flex items-center justify-center text-center px-6 md:px-16"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <header className="text-center p-5 pt-40 text-xl md:pt-60 md:text-2xl lg:text-left lg:p-20 lg:pt-40">
-          <MotionH1
-            className="font-semibold mb-4 text-white text-5xl md:text-6xl lg:text-8xl"
+        <div>
+          <motion.h1
+            className="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Movement For Change Youth Council
-          </MotionH1>
-
-          <MotionH2
-            className="text-white p-5 lg:w-2/3 md:text-lg lg:text-xl"
+          </motion.h1>
+          <motion.p
+            className="text-white text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-8"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            MCYC is an organization that has been dedicated to educating youth on social justice issues that impact North Americans since 2021.
-          </MotionH2>
-
-          <MotionButton
-            onClick={() => scrolltoHash('first-section')}
-            className="p-4 w-1/2 md:w-1/3 lg:w-1/5 m-5 bg-red-900 text-white"
+            Educating youth on social justice issues that impact North Americans since 2021.
+          </motion.p>
+          <motion.button
+            onClick={() => scrollTo('first-section')}
+            className="bg-red-800 text-white py-3 px-6 rounded-md text-sm md:text-base"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
           >
             Learn More
-          </MotionButton>
-        </header>
-      </MotionDiv>
+          </motion.button>
+        </div>
+      </motion.section>
 
-      <MotionMain
+      {/* Quote Section */}
+      <motion.section
         id="first-section"
-        className="py-10 md:py-20 px-5 md:px-20 lg:px-60 text-red-900 text-center bg-white"
+        className="bg-white py-12 md:py-20 text-center px-6 md:px-12 lg:px-48"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">
-        "Young people, when informed and empowered, when they realize that what they do truly makes a difference, can indeed change the world."
-        — Jane Goodall
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-medium">
+          "Young people, when informed and empowered, when they realize that what they do truly makes a difference, can indeed change the world." — Jane Goodall
         </h2>
-        </MotionMain>
+      </motion.section>
 
-
-      {/* <span className="block h-px mx-0 my-5 p-0 border-t-[#ccc] border-0 border-t border-solid bg-gray-white"></span> */}
-
-      <MotionMain
-        className='p-5 md:p-10 block lg:flex-row justify-center lg:justify-between items-center text-center bg-gray-white'
+      {/* Belief Section */}
+      <motion.section
+        className="bg-gray-100 py-16 px-6 md:px-12 lg:px-20"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <MotionH2 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-5 text-red-900 pt-12"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}>
-          Our Belief
-        </MotionH2>
-
-        <MotionMain
-          className='p-5 md:p-10 flex flex-col lg:flex-row justify-center lg:justify-between items-center text-center'
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          
-          <MotionDiv
-            className='mx-0 md:mx-10 w-full md:w-2/3 text-left'
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
+          <motion.div
+            className="flex-1"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <div className='p-2 md:p-5 text-lg md:text-xl lg:text-2xl'>
-              <p>
-              The Movement for Change Youth Council (MCYC) believes that young people are not just preparing to lead—they’re leading now. Too often, traditional systems overlook youth voices and potential. MCYC exists to change that. 
-<br /><br />
-Through advocacy, community initiatives, and leadership development, we create a space where youth are empowered to speak out, take action, and drive real change. By investing in youth today, we’re cultivating the leaders, innovators, and changemakers of tomorrow.
-              </p>
-            </div>
-          </MotionDiv>
-          
-          <MotionImg
-            className='w-full md:w-1/2 lg:w-1/3 h-auto m-5'
-            src="kids.webp"
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Belief</h2>
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed">
+              The Movement for Change Youth Council (MCYC) believes that young people are not just preparing to lead—they’re leading now. Too often, traditional systems overlook youth voices. Through advocacy, community initiatives, and leadership development, we empower youth to take action and drive real change.
+            </p>
+          </motion.div>
+          <motion.img
+            src="/kids.webp"
             alt="Kids"
+            className="flex-1 w-full max-w-sm object-cover rounded-lg shadow-md"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           />
+        </div>
+      </motion.section>
 
-        </MotionMain>
-      </MotionMain>
-
-      <MotionMain
-        className='p-5 md:p-10 block lg:flex-row justify-center lg:justify-between items-center text-center bg-white'
+      {/* Impact Section */}
+      <motion.section
+        className="bg-white py-20 px-6 md:px-12 text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-      <MotionH2 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-5 text-red-900 pt-12"
-         initial={{ y: -50, opacity: 0 }}
-         animate={{ y: 0, opacity: 1 }}
-         transition={{ delay: 0.5, duration: 1 }}>Our Impact</MotionH2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">Our Impact</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {stats.map((stat, index) => (
+            <StatItem key={stat.label} stat={stat} delay={0.5 + index * 0.2} />
+          ))}
+        </div>
+        <motion.button
+          onClick={() => router.push('/past-events')}
+          className="mt-10 bg-red-800 text-white py-3 px-6 rounded-md text-sm md:text-base"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Visit Our Past Events
+        </motion.button>
+      </motion.section>
 
-      </MotionMain>
-
-      <MotionMain
-        className='p-5 md:p-10 block lg:flex-row justify-center lg:justify-between items-center text-center bg-gray-white'
+      {/* Sponsors Section */}
+      <motion.section
+        id="past-events"
+        className="bg-gray-100 py-20 px-6 md:px-12 text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-      <MotionH2 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-5 text-red-900 pt-12"
-         initial={{ y: -50, opacity: 0 }}
-         animate={{ y: 0, opacity: 1 }}
-         transition={{ delay: 0.5, duration: 1 }}>Past Event</MotionH2>
-
-      </MotionMain>
-
-      <MotionMain
-        className='p-5 md:p-10 block lg:flex-row justify-center lg:justify-between items-center text-center bg-white'
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-      <MotionH3 className="text-5xl md:text-4xl lg:text-5xl font-bold pb-5 text-red-900 pt-12"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}>
-        
-        A big thanks to our Sponsors!
-        <br />
-        <br />
-       
-        Checkout our Instagram to stay updated and be part of the change!
-         
-      </MotionH3>
-
-      
-
-      </MotionMain>
-
-
-      {/* <Footer /> */}
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-red-900 mb-6">
+          A big thanks to our <a onClick={() => router.push('/sponsors')} className="underline">Sponsors</a>!
+        </h3>
+        <p className="text-base md:text-lg">
+          Check out our social media to stay updated and be part of the change!
+        </p>
+      </motion.section>
     </div>
   );
 };

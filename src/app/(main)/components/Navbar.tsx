@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
           </li>
           <li className="text-center py-2 lg:py-0">
             <Link href="/past_events">
-              <span className={Linkness("past_events")}>Past Events</span>
+              <span className={Linkness("past-events")}>Past Events</span>
             </Link>
           </li>
           <li className="text-center py-2 lg:py-0">
