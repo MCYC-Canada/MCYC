@@ -115,10 +115,10 @@ We believe that when youth are trusted with leadership today, they build the cou
             src="/group.webp"
             alt="MCYC Group Photo"
             className="flex-1 w-full max-w-sm object-cover rounded-lg shadow-md"
-            initial={{ x: -100, opacity: 0 }}
+            initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 2 }}
           />
         </div>
       </motion.section>
