@@ -17,31 +17,31 @@ const Sponsors = () => {
             name="Hub Climbing Markham"
             source="sponsor_hub.webp"
             link="https://hubclimbing.com/markham/"
-            size="85%"
+            size="60%"
           />
           <Sponsor
             name="Des Fleurs by Madi"
             source="sponsor_fleur.webp"
             link="https://www.etsy.com/ca/shop/DesFleursByMadi"
-            size="85%"
+            size="60%"
           />
           <Sponsor
             name="Seraph Custom Creations"
             source="sponsor_seraph.webp"
             link="https://www.etsy.com/shop/SeraphCustomCreation"
-            size="85%"
+            size="60%"
           />
           <Sponsor
             name="JOMO Studio"
             source="sponsor_jomo.webp"
             link="https://jomostudio.com/"
-            size="65%"
+            size="50%"
           />
           <Sponsor
             name="Etee"
             source="sponsor_etee.webp"
             link="https://www.shopetee.com/"
-            size="85%"
+            size="60%"
           />
         </div>
       </div>

@@ -6,9 +6,9 @@ import CountUp from 'react-countup';
 import { useRouter } from 'next/navigation';
 
 const stats = [
-  { label: "Students Engaged", value: 2500, suffix: "+", color: "bg-red-100" },
-  { label: "Volunteer Hours", value: 1000, suffix: "+", color: "bg-yellow-100" },
-  { label: "Topics Covered", value: 15, suffix: "+", color: "bg-green-100" },
+  { label: "Students Engaged", value: 2500, suffix: "+", color: "bg-red-900" },
+  { label: "Volunteer Hours", value: 1000, suffix: "+", color: "bg-red-900" },
+  { label: "Topics Covered", value: 15, suffix: "+", color: "bg-red-900" },
 ];
 
 const StatItem = ({ stat, delay }: { stat: typeof stats[0]; delay: number }) => {
@@ -22,10 +22,10 @@ const StatItem = ({ stat, delay }: { stat: typeof stats[0]; delay: number }) => 
       animate={{ scale: inView ? 1 : 0 }}
       transition={{ delay, duration: 0.6 }}
     >
-      <span className="text-2xl md:text-3xl text-red-800 font-semibold">
+      <span className="text-2xl md:text-3xl text-white font-semibold">
         {inView && <CountUp end={stat.value} duration={2} suffix={stat.suffix} />}
       </span>
-      <p className="text-xs md:text-sm text-center mt-2 text-gray-700">{stat.label}</p>
+      <p className="text-xs md:text-sm text-center mt-2 text-gray-100">{stat.label}</p>
     </motion.div>
   );
 };
@@ -60,7 +60,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Educating youth on social justice issues that impact North Americans since 2021.
+            Federally registered youth-led non-profit organization advocating for social justice by empowering a community of transformative leaders.
           </motion.p>
           <motion.button
             onClick={() => scrollTo('first-section')}
@@ -105,12 +105,15 @@ const Home = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Belief</h2>
             <p className="text-base md:text-lg lg:text-xl leading-relaxed">
-              The Movement for Change Youth Council (MCYC) believes that young people are not just preparing to lead—they’re leading now. Too often, traditional systems overlook youth voices. Through advocacy, community initiatives, and leadership development, we empower youth to take action and drive real change.
+              The Movement for Change Youth Council was born from the belief that youth are not just the leaders of tomorrow, they are the leaders of today. In a world where many traditional career paths and opportunities overlook the power of youth voices and their capacity to lead, we set out to do things differently. <br /> <br />MCYC exists to challenge that norm by creating a space where young people are not just included, but empowered to shape the future. Through advocacy, community work, and leadership development, we educate and equip youth with the tools to raise their voices, confront injustice, and drive meaningful change - now and into their careers. 
+<br /> <br />
+We believe that when youth are trusted with leadership today, they build the courage and vision to transform the world tomorrow.
+
             </p>
           </motion.div>
           <motion.img
-            src="/kids.webp"
-            alt="Kids"
+            src="/group.webp"
+            alt="MCYC Group Photo"
             className="flex-1 w-full max-w-sm object-cover rounded-lg shadow-md"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -129,7 +132,7 @@ const Home = () => {
         transition={{ duration: 1 }}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-10">Our Impact</h2>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-16">
           {stats.map((stat, index) => (
             <StatItem key={stat.label} stat={stat} delay={0.5 + index * 0.2} />
           ))}
