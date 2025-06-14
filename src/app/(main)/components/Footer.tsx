@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <h4 className="text-2xl">mcyc.22.0512@gmail.com</h4>
         <div className="grid grid-cols-2 gap-2">
           <Link href="/" className="text-xl">Home</Link>
-          <Link href="/past_events" className="text-xl">Past Events</Link>
+          <Link href="/past-events" className="text-xl">Past Events</Link>
           <Link href="/team" className="text-xl">Our Team</Link>
           <Link href="/sponsors" className="text-xl">Sponsors</Link>
         </div>

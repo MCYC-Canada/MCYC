@@ -11,8 +11,12 @@
   font-family:'Times New Roman', Times, serif;
 } */
 
+
 .background {
-    background-image: url('../../../public/bg.webp');
+  background-image: url('../../../public/bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .background_event {
